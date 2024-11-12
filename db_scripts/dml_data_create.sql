@@ -17,7 +17,11 @@ BEGIN
     END LOOP;
 END;
 
+DECLARE
+    mincid number := 0;
+    maxcid number := 0;
 BEGIN
+    SELECT MIN(ID), MAX(ID) INTO mincid, maxcid FROM CUSTOMERS;
     FOR l in 1 .. 1000 LOOP
         INSERT INTO ORDERS(
             ID,
@@ -28,7 +32,7 @@ BEGIN
         VALUES
         (
             seq_order_id.nextval,
-            floor(dbms_random.value(1,1001)),
+            floor(dbms_random.value(mincid,maxcid+1)),
             sysdate - floor(dbms_random.value(1,366)),
             floor(dbms_random.value(1,5))
         );
@@ -39,3 +43,7 @@ INSERT INTO ORDER_STATUSES(ID, NAME) VALUES (seq_order_status_id.nextval,'placed
 INSERT INTO ORDER_STATUSES(ID, NAME) VALUES (seq_order_status_id.nextval,'waiting');
 INSERT INTO ORDER_STATUSES(ID, NAME) VALUES (seq_order_status_id.nextval,'cancelled');
 INSERT INTO ORDER_STATUSES(ID, NAME) VALUES (seq_order_status_id.nextval,'fulfilled');
+
+
+
+commit;

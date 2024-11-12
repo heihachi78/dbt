@@ -1,5 +1,6 @@
 select
     id,
     customer_id,
-    order_date
+    order_date,
+    status_id
 from orders
