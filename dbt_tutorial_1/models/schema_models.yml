@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: customer_stats
+    description: Description for customer_stats table in models. Contains statistics about user orders.
+    columns:
+      - name: customer_id
+        description: Primary key.
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: id
+      - name: first_name
+        description: Yes, it's the first name.
+        tests:
+          - not_null
+      - name: last_name
+        description: Yes, it's the last name.
+        tests:
+          - not_null
+
+  - name: stg_customers
+    description: Description for stg_customers table in models. Prepares data for further processing.
+    columns:
+      - name: id
+        description: Primary key.
+        tests:
+          - unique
+          - not_null
+      - name: first_name
+        description: It's just a first name.
+        tests:
+          - not_null
+      - name: last_name
+        description: It's just a last name.
+        tests:
+          - not_null
+
+  - name: stg_orders
+    description: Description for stg_orders table in models. Prepares data for further processing.
+    columns:
+      - name: id
+        description: Primary key.
+        tests:
+          - unique
+          - not_null
+      - name: status_id
+        description: Represents the actual status of the order.
+        tests:
+          - accepted_values:
+              values: [1, 2, 3, 4]
+      - name: customer_id
+        description: Primary key of customers.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: id

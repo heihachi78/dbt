@@ -23,6 +23,25 @@
         {
             "authenticationType": 2,
             "dBAPrivilege": "None",
+            "userID": "PDBADMIN",
+            "passwordSaved": true,
+            "passwordStore": "Secret Storage",
+            "dataSource": "localhost:1521/FREEPDB1",
+            "connectionType": 2,
+            "databaseHostName": "localhost",
+            "databasePortNumber": "1521",
+            "databaseServiceName": "FREEPDB1",
+            "name": "PDBADMIN.FREEPDB1",
+            "color": "0000ff",
+            "currentSchema": "PDBADMIN",
+            "addSettingsScopeToConnectionName": true,
+            "addCurrentSchemaToConnectionName": true,
+            "filters": [],
+            "tnsAdmin": ""
+        },
+        {
+            "authenticationType": 2,
+            "dBAPrivilege": "None",
             "userID": "ORAUSER",
             "passwordSaved": true,
             "dataSource": "localhost:1521/FREEPDB1",
@@ -39,25 +58,6 @@
             "useCompatibleNamesDirectoryPath": true,
             "tnsAdmin": "",
             "passwordStore": "Secret Storage"
-        },
-        {
-            "authenticationType": 2,
-            "dBAPrivilege": "None",
-            "userID": "PDBADMIN",
-            "passwordSaved": true,
-            "passwordStore": "Secret Storage",
-            "dataSource": "localhost:1521/FREEPDB1",
-            "connectionType": 2,
-            "databaseHostName": "localhost",
-            "databasePortNumber": "1521",
-            "databaseServiceName": "FREEPDB1",
-            "name": "PDBADMIN.FREEPDB1",
-            "color": "0000ff",
-            "currentSchema": "PDBADMIN",
-            "addSettingsScopeToConnectionName": true,
-            "addCurrentSchemaToConnectionName": true,
-            "filters": [],
-            "tnsAdmin": ""
         }
     ],
     "oracledevtools.defaultConnection": "ORAUSER.FREEPDB1"
