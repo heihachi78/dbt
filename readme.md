@@ -29,3 +29,8 @@ https://www.youtube.com/playlist?list=PLy4OcwImJzBLJzLYxpxaPUmCWp8j1esvT
 
 python -m venv .dbt-env
 source dbt-env/bin/activate
+
+
+dbt init dbt_tutorial_1
+dbt test
+dbt debug
