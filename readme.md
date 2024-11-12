@@ -1,4 +1,3 @@
--------
 Oracle:
 -------
 
@@ -26,6 +25,7 @@ Dbt:
 https://discourse.getdbt.com/t/how-we-set-up-our-computers-for-working-on-dbt-projects/243
 https://docs.getdbt.com/docs/core/installation-overview
 https://docs.getdbt.com/guides/manual-install?step=1
+https://www.youtube.com/playlist?list=PLy4OcwImJzBLJzLYxpxaPUmCWp8j1esvT
 
 python -m venv .dbt-env
 source dbt-env/bin/activate
