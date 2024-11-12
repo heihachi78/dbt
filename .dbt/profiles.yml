@@ -1,0 +1,14 @@
+dbt_tutorial_1:
+  outputs:
+    dev:
+      host: localhost
+      password: userpass
+      port: 1521
+      protocol: tcp
+      schema: orauser
+      service: freepdb1
+      database: freepdb1
+      threads: 1
+      type: oracle
+      user: orauser
+  target: dev
