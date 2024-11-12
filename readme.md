@@ -34,3 +34,4 @@ source dbt-env/bin/activate
 dbt init dbt_tutorial_1
 dbt test
 dbt debug
+dbt run
