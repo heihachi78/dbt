@@ -1,5 +1,13 @@
 version: 2
 
+sources:
+  - name: freepdb1_orausers
+    database: freepdb1
+    schema: orauser
+    tables:
+      - name: orders
+      - name: customers
+
 models:
   - name: customer_stats
     columns:

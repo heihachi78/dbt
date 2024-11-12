@@ -3,4 +3,4 @@ select
     customer_id,
     order_date,
     status_id
-from orders
+from {{ source('freepdb1_orausers', 'orders') }}
