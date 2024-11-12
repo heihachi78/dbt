@@ -35,3 +35,5 @@ dbt init dbt_tutorial_1
 dbt test
 dbt debug
 dbt run
+dbt docs generate
+dbt docs serve
