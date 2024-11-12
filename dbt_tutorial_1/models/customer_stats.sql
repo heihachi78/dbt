@@ -5,19 +5,11 @@
 }}
 
 with w_customers as (
-    select
-        id,
-        first_name,
-        last_name
-    from customers
+    select * from {{ ref('stg_customers') }}
 ),
 
 w_orders as (
-    select
-        id,
-        customer_id,
-        order_date
-    from orders
+    select * from {{ ref('stg_orders') }}
 ),
 
 w_customer_orders as (
