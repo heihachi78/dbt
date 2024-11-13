@@ -37,3 +37,10 @@ dbt debug
 dbt run
 dbt docs generate
 dbt docs serve
+
+----
+Others:
+----
+https://github.com/tconbeer/sqlfmt
+https://github.com/tconbeer/dbt-utils
+
